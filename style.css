@@ -61,14 +61,14 @@ div {
     background-color: white;
 }
 
-.pressed {
-    box-shadow: 0 3px 4px 0 #DBEDF3;
-    opacity: 0.5;
-}
-
 footer {
     color: #DBEDF3;
     font-family: sans-serif;
     font-size: 1.5rem;
     text-shadow: 2px 0 #DA0463;
+}
+
+.pressed {
+    box-shadow: 0 3px 4px 0 #DBEDF3;
+    opacity: 0.5;
 }
