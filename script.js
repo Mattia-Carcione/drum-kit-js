@@ -4,11 +4,13 @@ for (let i = 0; i < drumButtons.length; i++) {
     drumButtons[i].addEventListener('click', function () {
         var buttonInnerHTML = drumButtons[i].innerHTML;
         playSound(buttonInnerHTML);
+        animation(buttonInnerHTML);
     });
 }
 
 document.addEventListener('keydown', function (event) {
     playSound(event.key);
+    animation(event.key);
 })
 
 function playSound(event) {
@@ -52,4 +54,12 @@ function playSound(event) {
             console.error("Wrong key pressed");
             break;
     }
+}
+
+function animation(key) {
+    var activeButton = document.querySelector("." + key);
+    activeButton.classList.add("pressed");
+    setTimeout(() => {
+        activeButton.classList.remove("pressed");
+    }, 100)
 }
